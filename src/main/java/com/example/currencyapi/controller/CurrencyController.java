@@ -15,8 +15,8 @@ public class CurrencyController {
         this.currencyService = currencyService;
     }
 
-    @GetMapping("/api/addition") 
-    public int addition(@RequestParam int a, @RequestParam int b) {
-        return currencyService.add(a, b);
+    @GetMapping("/api/convert") 
+    public double convert(@RequestParam String from, @RequestParam String to, @RequestParam double amount) {
+        return currencyService.convert(from, to, amount);
     }
 }
